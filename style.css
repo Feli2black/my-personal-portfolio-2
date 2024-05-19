@@ -81,9 +81,9 @@ section{
 .home{
    display:flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between;
    gap: 15rem;
-   padding: 2rem;
+   padding: 3rem;
 }
 .home-content{
    display: flex;
@@ -91,7 +91,7 @@ section{
    align-items: flex-start;
    text-align: left;
    justify-content: center;
-   margin: 3rem;
+   
 }
 span{
    color: #00ffee;
@@ -117,21 +117,10 @@ span{
 
 .home-img {
    display: flex;
-   justify-content: flex-end; /* Ensures the image is aligned to the right */
+   justify-content: flex-end; 
  }
 
-/* .home-img img{
-   position: relative;
-   align-items: flex-end;
-   top: 10rem;
-   width: 32vw;
-   justify-content: right;
-   border-radius: 50%;
-   box-shadow: 0 0 25px #00ffee;
-   cursor: pointer;
-   transition: 0.4s ease-in-out;
-   float: right;
-} */
+
 
 .home-img img {
    width: 32vw;
@@ -405,7 +394,7 @@ span{
    margin-bottom: 3rem;
    color: white;
    text-align: center;
-   font-size: 3rem;
+   font-size: 6rem;
 }
 .contact form{
    display: flex;
@@ -438,7 +427,7 @@ span{
 .contact form .btn{
    margin-top: 2rem;
    padding: 1.5rem 3rem;
-   font-size: 2rem;
+   font-size: 4rem;
    color: white;
    background: #00ffee;
    border: none;
@@ -452,8 +441,63 @@ span{
 }
 .footer{
    position: relative;
-   
+   bottom: 0;
+   width: 100%;
+   padding: 40px 0;
+   background-color: #131313;
+   text-align: center;
+}
+.footer.social{
+   padding-bottom: 40px;
+   color: #00ffee;
+}
+.footer.social a{
+   font-size: 45px;
+   color: #00ffee;
+   border: 3px solid #00ffee;
+   width: 42px;
+   height: 42px;
+   line-height: 42px;
+   display: inline-block;
+   text-align: center;
+   border-radius: 50%;
+   margin: 0 10px;
+   transition: 0.3s ease-in-out;
+}
+.footer.social a:hover{
+   transform: scale(1.2) translateY(-10px);
+   background-color: #00ffee;
+   color: black;
+   box-shadow: 0 0 25px #00ffee ;
 
+}
+.footer ul{
+   margin-top: 0;
+   padding: 0;
+   font-size: 20px;
+   list-style: none;
+   line-height: 1.6;
+   margin-bottom: 0;
+}
+
+.footer ul li a{
+   color: white;
+   border-bottom: 3px solid transparent;
+   transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+   border-bottom: 3px solid #00ffee;
+}
+.footer ul  li{
+   display: inline-block;
+   padding: 0 15px;
+
+}
+.footer.copyright{
+   margin-top: 50px;
+   text-align: center;
+   font-size: 16px;
+   color: white;
 }
 
 
