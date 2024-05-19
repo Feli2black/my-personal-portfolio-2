@@ -161,40 +161,69 @@ span{
    box-shadow: 0 0 25px #00ffee;
    background-color: #00ffee;
 }
-.btn{
-   display: inline-block;
-   padding: 1rem 2.8rem;
-   background: #00ffee;
-   box-shadow: 0 0 25px #00ffee;
-   border-radius: 4rem;
-   font-size: 1.6rem;
-   color: black;
-   border: 2px solid transparent;
-   letter-spacing: 0.1rem;
-   font-weight: 600;
-   transition: 0.3s ease-in-out;
-   cursor: pointer;
+.home-content .btn-group {
+   display: flex;
+   justify-content: space-between;
+   width: 345px;
+   height: 50px;
+   
 }
-.btn:hover{
-   transform: scale(1.05);
-   box-shadow: 0 0 50px #00ffee;
-}
-.btn-group{
-   display:flex;
+.btn-group a {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
    align-items: center;
-   gap: 1.5rem;
-}
-.btn-group a:nth-of-type(2){
-   background-color: black;
-   color: #00ffee;
+   width: 150px;
+   height: 100%;
+   background: #00ffee;
    border: 2px solid #00ffee;
-   box-shadow: 0 0 25px transparent;
+   border-radius: 8px;
+   box-shadow: 0 0 50px #00ffee;
+   font-size: 19px;
+   color: #081b29;
+   text-decoration: none;
+   font-weight: 600;
+   letter-spacing: 1px;
+   z-index: 1;
+   overflow: hidden;
+   transition: .5s;
 }
 
-.btn-groupa:nth-of-type(2):hover{
+.btn-group a:hover {
+   color: #00ffee;
+}
+
+.btn-group a:nth-child(2) {
+   box-shadow: 0 0 25px transparent;
+   background: transparent;
+   color: #00ffee;
+}
+
+.btn-group a:nth-child(2):hover {
    box-shadow: 0 0 25px #00ffee;
-   background-color: #00ffee;
-   color: black;
+   color: #081b29;
+}
+
+.btn-group a:nth-child(2)::before {
+   box-shadow: 0 0 25px #00ffee;
+   background: #00ffee;
+
+}
+
+.btn-group a::before {
+   content:  '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: #081b29;
+   z-index: -1;
+   transition: .5s;
+}
+
+.btn-group a:hover::before {
+   width: 100%;
 }
 .text-animation{
    font-size: 34px;
@@ -365,12 +394,15 @@ span{
     .wrapper img {
       width: 100%;
       height: auto;
+      box-shadow: 0 0 25px #00ffee;
+      transition: 0.4s ease-in-out;
     }
     
  
  .projects-item img {
    padding: 15px; ;
    text-align: center;
+   
  }
   
  .projects-item h2 {
